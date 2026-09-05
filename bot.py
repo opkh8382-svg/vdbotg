@@ -5,10 +5,11 @@ from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 import yt_dlp
 
-BOT_TOKEN = "8900612905:AAHgn7Pg8N9Ne4_L2QI3-zL_xAl7Rb8h4Mk"
-BOT_USERNAME = "DonSovanna67bot"
+# ទិន្នន័យ Bot ថ្មីរបស់អ្នក
+BOT_TOKEN = "8872828720:AAGPmF_pexO7qeP7TKl_4cOxFGwz8OoQvRU"
+BOT_USERNAME = "Happydownload_bot"
 ADMIN_LINK = "https://t.me/heipko80"
-START_IMAGE_URL = "https://picsum.photos/800/400"
+START_IMAGE_URL = "https://i.supaimg.com/2c2963a3-a72b-47fd-ba30-ac78827d2091/cfa05bbb-5cf5-4780-a8fa-f85aa96202bb.jpg"
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
@@ -66,7 +67,6 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
     user_id = query.from_user.id
     await query.answer()
 
-    # ប៊ូតុង បោះបង់ ឬ Start ឡើងវិញ
     if query.data == "cancel_action":
         if user_id in USER_URLS:
             del USER_URLS[user_id]
